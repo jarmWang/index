@@ -3,9 +3,22 @@
     <head>
         <title>我的个人网站</title>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <script src="./main.js"></script>
+        <!-- <script src="./main.js"></script> -->
     </head>
     <body>
-    <div id="app">{{ msg }}</div>
+    <div id="app">{{ msg }}123</div>
     </body>
+
+    <script>
+        const { createApp, ref } = Vue
+        
+        createApp({
+            setup() {
+                const msg = 'hello world!'
+                return {
+                    msg
+                }
+            }
+        }).$mount('app')
+    </script>
 </html>
